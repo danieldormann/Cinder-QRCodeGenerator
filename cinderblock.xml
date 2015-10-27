@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<cinder>
+<block
+	name="Cinder-QRCodeGenerator"
+	id="de.fluur.QRCodeGenerator"
+	author="Daniel Dormann"
+	summary="QRCodeGenerator for Cinder based ofxQRCodeGenerator by Brett Renfer aka robotconscience."
+	>
+	<supports os="msw" />
+	<supports os="macosx" />
+	<includePath>include</includePath>
+	<includePath>src</includePath>
+	<header>include/qrencode.h</header>
+	<header>src/QRCodeGenerator.h</header>
+	<platform os="macosx">
+		<dynamicLibrary>lib/osx/libqrencode.3.dylib</dynamicLibrary>
+	</platform>
+	<platform os="msw" config="debug">
+		<staticLibrary>lib/win/qrcodelib_debug.lib</staticLibrary>
+	</platform>
+	<platform os="msw" config="release">
+		<staticLibrary>lib/win/qrcodelib_release.lib</staticLibrary>
+	</platform>
+</block>
+</cinder>
